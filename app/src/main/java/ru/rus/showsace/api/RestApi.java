@@ -3,12 +3,21 @@ package ru.rus.showsace.api;
 
 import android.os.Handler;
 
+import org.greenrobot.eventbus.EventBus;
+
+import ru.rus.showsace.events.OnAPILoginFail;
+import ru.rus.showsace.events.OnAPILoginSuccess;
+
 public class RestApi {
-    public static void login(String login, String password) {
+    public static void login(final String login, final String password) {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //TODO
+                if (login.equals("login") && password.equals("password")){
+                    EventBus.getDefault().post(new OnAPILoginSuccess());
+                } else {
+                    EventBus.getDefault().post(new OnAPILoginFail());
+                }
             }
         }, 3000);
     }
@@ -17,7 +26,7 @@ public class RestApi {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //TODO
+                //TODO: remove hardcoded login & pass
             }
         }, 3000);
     }

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import ru.rus.showsace.R;
 
@@ -41,13 +42,16 @@ public class LoginFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_login, container, false);
 
+        final EditText login = (EditText) rootView.findViewById(R.id.login_ET);
+        final EditText password = (EditText) rootView.findViewById(R.id.password_ET);
+
         Button loginButton = (Button) rootView.findViewById(R.id.login_btn);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mListener != null){
                     //TODO get login & pass from ET
-                    mListener.onLoginAttempt("login", "password");
+                    mListener.onLoginAttempt(login.getText().toString(), password.getText().toString());
                 }
             }
         });
