@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import ru.rus.showsace.R;
+import ru.rus.showsace.api.RestApi;
 import ru.rus.showsace.fragments.LoginFragment;
 
 public class AuthActivity extends AppCompatActivity implements LoginFragment.OnFragmentInteractionListener {
@@ -20,7 +21,7 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
 
     @Override
     public void onLoginAttempt(String login, String password) {
-        //TODO: add logic
+        RestApi.login(login, password);
     }
 
     @Override
