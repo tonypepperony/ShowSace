@@ -1,8 +1,18 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.rus.showsace.fragments.LoginFragment">
+    tools:context="ru.rus.showsace.fragments.LoginFragment"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/login_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/password_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/login_btn"
@@ -10,4 +20,4 @@
         android:layout_height="wrap_content"
         android:text="@string/login_btn"/>
 
-</FrameLayout>
+</LinearLayout>
