@@ -8,11 +8,13 @@
     <EditText
         android:id="@+id/login_ET"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="@string/email_auth"/>
     <EditText
         android:id="@+id/password_ET"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="@string/password_auth"/>
 
     <Button
         android:id="@+id/login_btn"

@@ -2,6 +2,7 @@ package ru.rus.showsace.activities;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -56,7 +57,7 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onAPILoginSuccess(OnAPILoginSuccess event){
+    public void onAPILoginFail(OnAPILoginFail event){
         new AlertDialog.Builder(this)
                 .setTitle("Произошла ошибка")
                 .setMessage("Неверный логин или пароль")
@@ -69,9 +70,8 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onAPILoginFail(OnAPILoginFail event){
-        //TODO
-        Toast.makeText(this, "Успешно залогинились", Toast.LENGTH_LONG).show();
+    public void onAPILoginSuccess(OnAPILoginSuccess event){
+        startActivity(new Intent(this, MainActivity.class));
     }
 
 }
