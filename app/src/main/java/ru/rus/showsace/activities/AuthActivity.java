@@ -11,6 +11,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import ru.rus.showsace.App;
 import ru.rus.showsace.R;
 import ru.rus.showsace.api.RestApi;
 import ru.rus.showsace.events.OnAPILoginFail;
@@ -22,6 +23,13 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (App.getInstance().getCurrentState() == App.STATE_LOGGED){
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_auth);
 
         getSupportFragmentManager().beginTransaction().add(R.id.activity_auth, LoginFragment.newInstance())
@@ -71,7 +79,9 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onAPILoginSuccess(OnAPILoginSuccess event){
+        App.getInstance().setCurrentState(App.STATE_LOGGED);
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
 }
