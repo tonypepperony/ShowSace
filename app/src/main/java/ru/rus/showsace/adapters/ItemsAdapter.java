@@ -1,5 +1,6 @@
 package ru.rus.showsace.adapters;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,11 +47,39 @@ ArrayList<Item> items = new ArrayList<>();
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
         if (view == null){ //если итем не создан, создаем, если создан заменяем
             holder = new ViewHolder();
+
+            view = inflater.inflate(R.layout.listview_items_tovary, viewGroup, false);
+
+            holder.imageView = (ImageView) view.findViewById(R.id.image60);
+            holder.textView = (TextView) view.findViewById(R.id.text60);
+            holder.addButton = (Button) view.findViewById(R.id.addButton);
+            holder.removeButton = (Button) view.findViewById(R.id.removeButton);
+
+            view.setTag(holder);
+            Log.i("TAG", "Inflate");
+        } else {
+            holder = (ViewHolder) view.getTag();
+            Log.i("TAG", "Inflate");
         }
 
-        view = inflater.inflate(R.layout.listview_items_tovary, viewGroup, false);
+        final Item item = items.get(i);
+        holder.imageView.setImageResource(item.getResId());
+        holder.textView.setText(item.getName());
+        holder.addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: обработать кнопку
+            }
+        });
+        holder.removeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: обработать кнопку
+            }
+        });
 
-        return null;
+
+        return view;
     }
 
     private static class ViewHolder{

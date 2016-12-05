@@ -10,12 +10,14 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/image60"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:scaleType="centerCrop"
             android:src="@drawable/stub1"/>
 
         <TextView
+            android:id="@+id/text60"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
