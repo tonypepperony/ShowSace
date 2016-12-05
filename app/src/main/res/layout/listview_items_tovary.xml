@@ -24,7 +24,7 @@
             android:layout_gravity="top"
             android:gravity="center"
             android:text="Item title"
-            android:textSize="30dp"
+            android:textSize="20dp"
             />
 
     </LinearLayout>
