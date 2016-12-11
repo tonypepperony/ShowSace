@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,13 +48,15 @@ ArrayList<Item> items = new ArrayList<>();
         if (view == null){ //если итем не создан, создаем, если создан заменяем
             holder = new ViewHolder();
 
-            view = inflater.inflate(R.layout.listview_items_tovary, viewGroup, false);
+            view = inflater.inflate(R.layout.listview_basket, viewGroup, false);
 
             holder.imageView = (ImageView) view.findViewById(R.id.image60);
             holder.textView = (TextView) view.findViewById(R.id.text60);
-            holder.addButton = (Button) view.findViewById(R.id.addButton);
-            holder.removeButton = (Button) view.findViewById(R.id.removeButton);
+//            holder.addButton = (Button) view.findViewById(R.id.addButton);
+//            holder.removeButton = (Button) view.findViewById(R.id.removeButton);
             holder.priceView = (TextView) view.findViewById(R.id.textPrice60);
+            holder.deleteButton = (ImageButton) view.findViewById(R.id.deleteButton);
+
 
             view.setTag(holder);
             Log.i("TAG", "Inflate");
@@ -66,13 +68,7 @@ ArrayList<Item> items = new ArrayList<>();
         final Item item = items.get(i);
         holder.imageView.setImageResource(item.getResId());
         holder.textView.setText(item.getName());
-        holder.addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO: обработать кнопку
-            }
-        });
-        holder.removeButton.setOnClickListener(new View.OnClickListener() {
+        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO: обработать кнопку
@@ -88,8 +84,7 @@ ArrayList<Item> items = new ArrayList<>();
     private static class ViewHolder{
         public ImageView imageView;
         public TextView textView;
-        public Button addButton;
-        public Button removeButton;
+        public ImageButton deleteButton;
         public TextView priceView;
     }
 }
