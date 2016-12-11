@@ -54,6 +54,7 @@ ArrayList<Item> items = new ArrayList<>();
             holder.textView = (TextView) view.findViewById(R.id.text60);
             holder.addButton = (Button) view.findViewById(R.id.addButton);
             holder.removeButton = (Button) view.findViewById(R.id.removeButton);
+            holder.priceView = (TextView) view.findViewById(R.id.textPrice60);
 
             view.setTag(holder);
             Log.i("TAG", "Inflate");
@@ -78,6 +79,8 @@ ArrayList<Item> items = new ArrayList<>();
             }
         });
 
+        holder.priceView.setText(""+item.getPrice()+"p.");
+
 
         return view;
     }
@@ -87,5 +90,6 @@ ArrayList<Item> items = new ArrayList<>();
         public TextView textView;
         public Button addButton;
         public Button removeButton;
+        public TextView priceView;
     }
 }

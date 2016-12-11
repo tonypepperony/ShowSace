@@ -22,11 +22,11 @@ public class SouvenirsActivity extends AppCompatActivity {
         listView.setAdapter(itemsAdapter);
 
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item(301, "Darth Vader", R.drawable.souv01));
-        items.add(new Item(302, "Batman", R.drawable.souv02));
-        items.add(new Item(303, "Casio f-91w white", R.drawable.souv03));
-        items.add(new Item(304, "Casio f-91w black", R.drawable.souv04));
-        items.add(new Item(305, "Casio f-91w metallic", R.drawable.souv05));
+        items.add(new Item(301, "Darth Vader", R.drawable.souv01, 150));
+        items.add(new Item(302, "Batman", R.drawable.souv02, 150));
+        items.add(new Item(303, "Casio f-91w white", R.drawable.souv03, 250));
+        items.add(new Item(304, "Casio f-91w black", R.drawable.souv04, 250));
+        items.add(new Item(305, "Casio f-91w metallic", R.drawable.souv05, 250));
 
         itemsAdapter.setItems(items);
     }

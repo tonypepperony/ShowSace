@@ -8,11 +8,13 @@ public class Item {
     private int id;
     private String name;
     private int resId;
+    private int price;
 
-    public Item(int id, String name, int resId) {
+    public Item(int id, String name, int resId, int price) {
         this.id = id;
         this.name = name;
         this.resId = resId;
+        this.price = price;
     }
 
     public int getId() {
@@ -37,5 +39,13 @@ public class Item {
 
     public void setResId(int resId) {
         this.resId = resId;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

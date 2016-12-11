@@ -22,12 +22,12 @@ public class StickersActivity extends AppCompatActivity {
         listView.setAdapter(itemsAdapter);
 
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item(201, "Sticker pack #1", R.drawable.stick01));
-        items.add(new Item(202, "Sticker pack #2", R.drawable.stick02));
-        items.add(new Item(203, "Sticker pack #3", R.drawable.stick03));
-        items.add(new Item(204, "Sticker pack #4", R.drawable.stick04));
-        items.add(new Item(205, "Sticker pack #5", R.drawable.stick05));
-        items.add(new Item(206, "Sticker pack #6", R.drawable.stick06));
+        items.add(new Item(201, "Sticker pack #1", R.drawable.stick01, 100));
+        items.add(new Item(202, "Sticker pack #2", R.drawable.stick02, 100));
+        items.add(new Item(203, "Sticker pack #3", R.drawable.stick03, 100));
+        items.add(new Item(204, "Sticker pack #4", R.drawable.stick04, 100));
+        items.add(new Item(205, "Sticker pack #5", R.drawable.stick05, 100));
+        items.add(new Item(206, "Sticker pack #6", R.drawable.stick06, 100));
 
         itemsAdapter.setItems(items);
     }

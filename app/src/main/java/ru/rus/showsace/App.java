@@ -4,8 +4,13 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.util.ArrayList;
+
+import ru.rus.showsace.models.Item;
+
 public class App extends Application { // хранит состояние залогинин или нет
     private static App instance;
+    private static ArrayList<Item> zakaz;
 
     public static final String APP_STATE = "appState";
     public static final int STATE_LOGGED = 10;
@@ -37,5 +42,6 @@ public class App extends Application { // хранит состояние зал
         instance = this;
         sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
         currentState = sharedPreferences.getInt(APP_STATE, STATE_NOTLOGGED);
+        zakaz = new ArrayList<Item>();
     }
 }
