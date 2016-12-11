@@ -5,12 +5,13 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 import ru.rus.showsace.models.Item;
 
 public class App extends Application { // хранит состояние залогинин или нет
     private static App instance;
-    private static ArrayList<Item> zakaz;
+    private ArrayList<Item> zakaz = new ArrayList<>();
 
     public static final String APP_STATE = "appState";
     public static final int STATE_LOGGED = 10;
@@ -34,6 +35,29 @@ public class App extends Application { // хранит состояние зал
             editor.putInt(APP_STATE, currentState);
             editor.commit(); // запись состояния на диск
         }
+    }
+
+    public ArrayList<Item> getZakaz() {
+        return zakaz;
+    }
+
+    public void addZakazItem(Item item) {
+        zakaz.add(item);
+    }
+
+    public void removeZakazItem(Item item) {
+        ListIterator<Item> it = zakaz.listIterator();
+        while (it.hasNext()) {
+            Item current = it.next();
+            if (current.getId() == item.getId()) {
+                it.remove();
+                break;
+            }
+        }
+    }
+
+    public void clearZakaz() {
+        zakaz.clear();
     }
 
     @Override
