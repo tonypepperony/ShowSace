@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import ru.rus.showsace.App;
 import ru.rus.showsace.R;
 import ru.rus.showsace.models.Item;
 
@@ -72,6 +73,7 @@ ArrayList<Item> items = new ArrayList<>();
             @Override
             public void onClick(View view) {
                 //TODO: обработать кнопку
+                App.getInstance().removeZakazItem(item);
             }
         });
 
