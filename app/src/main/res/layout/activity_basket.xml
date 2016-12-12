@@ -8,13 +8,29 @@
     tools:context="ru.rus.showsace.activities.BasketActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/basketimage"
-        android:id="@+id/imageView2"
-        android:adjustViewBounds="true"
-        android:layout_weight="1"/>
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/basketimage"
+            android:id="@+id/imageView2"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/v"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageButton"
+            android:layout_weight="1"
+            android:background="#00000000" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listItemsBasket"
