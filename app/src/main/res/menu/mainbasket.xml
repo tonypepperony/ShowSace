@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/basket"
+        android:id="@+id/clear"
         android:orderInCategory="100"
         app:showAsAction="always"
-        android:title="@string/basket"
-        android:icon="@drawable/basket_icon"
+        android:title="@string/clear"
+        android:icon="@drawable/clear"
         >
     </item>
 </menu>
