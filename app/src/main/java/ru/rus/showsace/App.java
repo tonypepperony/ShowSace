@@ -11,7 +11,7 @@ import ru.rus.showsace.models.Item;
 
 public class App extends Application { // хранит состояние залогинин или нет
     private static App instance;
-    private ArrayList<Item> zakaz = new ArrayList<>();
+    private static ArrayList<Item> zakaz = new ArrayList<>();
 
     public static final String APP_STATE = "appState";
     public static final int STATE_LOGGED = 10;
@@ -37,7 +37,7 @@ public class App extends Application { // хранит состояние зал
         }
     }
 
-    public ArrayList<Item> getZakaz() {
+    public static ArrayList<Item> getZakaz() {
         return zakaz;
     }
 
