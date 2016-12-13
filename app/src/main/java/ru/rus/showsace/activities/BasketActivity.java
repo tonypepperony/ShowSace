@@ -1,6 +1,9 @@
 package ru.rus.showsace.activities;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +17,8 @@ import ru.rus.showsace.adapters.ItemsAdapterBasket;
 import ru.rus.showsace.models.Item;
 
 public class BasketActivity extends AppCompatActivity {
+    AlertDialog.Builder ad;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,27 @@ public class BasketActivity extends AppCompatActivity {
         ArrayList<Item> items = new ArrayList<>(App.getZakaz());
 
         itemsAdapter.setItems(items);
+
+        context = BasketActivity.this;
+        String message = "Очистить корзину?";
+        String ok = "ДА";
+        String cancel ="ОТМЕНА";
+
+        ad = new AlertDialog.Builder(context);
+        ad.setMessage(message);
+        ad.setPositiveButton(ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                App.getInstance().clearZakaz();
+            }
+        });
+
+        ad.setNegativeButton(cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
     }
 
     @Override
@@ -40,7 +66,7 @@ public class BasketActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.clear) {
-            App.getInstance().clearZakaz();
+            ad.show();
         }
 
         return super.onOptionsItemSelected(item);
