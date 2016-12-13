@@ -16,17 +16,18 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/basketimage"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/acceptorder"
+            android:scaleType="fitXY"
             android:id="@+id/imageView2"
             android:adjustViewBounds="true"
             android:layout_weight="1"/>
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/v"
-            android:scaleType="fitCenter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/next"
+            android:scaleType="centerInside"
             android:id="@+id/imageButton"
             android:layout_weight="1"
             android:background="#00000000" />
