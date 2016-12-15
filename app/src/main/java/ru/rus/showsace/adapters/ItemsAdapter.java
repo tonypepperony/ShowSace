@@ -70,20 +70,17 @@ ArrayList<Item> items = new ArrayList<>();
         holder.addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: обработать кнопку
                 App.getInstance().addZakazItem(item);
             }
         });
         holder.removeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: обработать кнопку
                 App.getInstance().removeZakazItem(item);
             }
         });
 
         holder.priceView.setText(""+item.getPrice()+"p.");
-
 
         return view;
     }

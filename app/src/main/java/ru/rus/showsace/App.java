@@ -3,6 +3,7 @@ package ru.rus.showsace;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
@@ -47,6 +48,7 @@ public class App extends Application { // хранит состояние зал
 
     public void addZakazItem(Item item) {
         zakaz.add(item);
+        Toast.makeText(getBaseContext(), "добавлено в корзину", Toast.LENGTH_SHORT).show();
     }
 
     public void removeZakazItem(Item item) {
@@ -55,6 +57,7 @@ public class App extends Application { // хранит состояние зал
             Item current = it.next();
             if (current.getId() == item.getId()) {
                 it.remove();
+                Toast.makeText(getBaseContext(), "удалено", Toast.LENGTH_SHORT).show();
                 break;
             }
         }
