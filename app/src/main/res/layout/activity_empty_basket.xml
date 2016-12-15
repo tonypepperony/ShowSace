@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_empty_basket"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.rus.showsace.activities.EmptyBasketActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/isemptybasket"
+        android:id="@+id/imageView3"
+        android:layout_marginBottom="84dp"
+        android:layout_above="@+id/EB_return_btn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Вернуться в главное меню"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/EB_return_btn"
+        android:layout_marginBottom="79dp"
+        android:background="#7851b3"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

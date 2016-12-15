@@ -41,6 +41,10 @@ public class App extends Application { // хранит состояние зал
         return zakaz;
     }
 
+    public static int getSizeZakaz(){
+        return zakaz.size();
+    }
+
     public void addZakazItem(Item item) {
         zakaz.add(item);
     }

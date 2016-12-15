@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import ru.rus.showsace.App;
 import ru.rus.showsace.R;
 import ru.rus.showsace.adapters.ItemsAdapter;
 import ru.rus.showsace.models.Item;
@@ -52,8 +53,13 @@ public class SodaActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.basket) {
-            Intent intent = new Intent(getBaseContext(), BasketActivity.class);
-            startActivity(intent);
+            if (App.getSizeZakaz() >= 1) {
+                Intent intent = new Intent(getBaseContext(), BasketActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(getBaseContext(), EmptyBasketActivity.class);
+                startActivity(intent);
+            }
         }
 
         return super.onOptionsItemSelected(item);

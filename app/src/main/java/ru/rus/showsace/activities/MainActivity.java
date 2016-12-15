@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import ru.rus.showsace.App;
 import ru.rus.showsace.R;
 
 public class MainActivity extends AppCompatActivity
@@ -70,8 +71,13 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.basket) {
-            Intent intent = new Intent(getBaseContext(), BasketActivity.class);
-            startActivity(intent);
+            if (App.getSizeZakaz() >= 1) {
+                Intent intent = new Intent(getBaseContext(), BasketActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(getBaseContext(), EmptyBasketActivity.class);
+                startActivity(intent);
+            }
         }
 
         return super.onOptionsItemSelected(item);
