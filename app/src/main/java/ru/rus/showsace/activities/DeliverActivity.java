@@ -13,6 +13,7 @@ import android.widget.Toast;
 import ru.rus.showsace.R;
 
 public class DeliverActivity extends AppCompatActivity {
+    public int DELIVERY_WAY;
     private TextView stoimost;
     EditText address;
     Button next2;
@@ -25,6 +26,8 @@ public class DeliverActivity extends AppCompatActivity {
         stoimost = (TextView) findViewById(R.id.etDeliver);
 
         next2 = (Button) findViewById(R.id.nextButton);
+
+        DELIVERY_WAY = 0;
 
         RadioButton radioButton1 = (RadioButton) findViewById(R.id.rButton1);
         radioButton1.setOnClickListener(rbListener);
@@ -60,16 +63,20 @@ public class DeliverActivity extends AppCompatActivity {
             RadioButton rb = (RadioButton) view;
                 switch (rb.getId()) {
                     case R.id.rButton1: stoimost.setText("стоимость: бесплатно");
+                        DELIVERY_WAY = 1;
                         address.setVisibility(View.INVISIBLE);
                         break;
                     case R.id.rButton2: stoimost.setText(R.string.st100rub);
+                        DELIVERY_WAY = 2;
                         address.setVisibility(View.INVISIBLE);
                         break;
                     case R.id.rButton3: stoimost.setText(R.string.st100rub);
+                        DELIVERY_WAY = 3;
                         address.setVisibility(View.VISIBLE);
                         break;
                     default:
                         address.setText(" ");
+                        DELIVERY_WAY = 0;
                         break;
                 }
         }
