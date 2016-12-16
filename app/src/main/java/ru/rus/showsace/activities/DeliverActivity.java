@@ -3,6 +3,7 @@ package ru.rus.showsace.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -10,6 +11,7 @@ import ru.rus.showsace.R;
 
 public class DeliverActivity extends AppCompatActivity {
     private TextView stoimost;
+    EditText address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,9 @@ public class DeliverActivity extends AppCompatActivity {
 
         RadioButton radioButton3 = (RadioButton) findViewById(R.id.rButton3);
         radioButton3.setOnClickListener(rbListener);
+
+        address = (EditText) findViewById(R.id.editText4);
+        address.setVisibility(View.INVISIBLE);
     }
 
     View.OnClickListener rbListener = new View.OnClickListener() {
@@ -34,13 +39,16 @@ public class DeliverActivity extends AppCompatActivity {
             RadioButton rb = (RadioButton) view;
                 switch (rb.getId()) {
                     case R.id.rButton1: stoimost.setText("стоимость: бесплатно");
+                        address.setVisibility(View.INVISIBLE);
                         break;
                     case R.id.rButton2: stoimost.setText(R.string.st100rub);
+                        address.setVisibility(View.INVISIBLE);
                         break;
                     case R.id.rButton3: stoimost.setText(R.string.st100rub);
+                        address.setVisibility(View.VISIBLE);
                         break;
                     default:
-                        stoimost.setText(" ");
+                        address.setText(" ");
                         break;
                 }
         }
