@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -44,6 +45,7 @@ public class BasketActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 App.getInstance().clearZakaz();
+                Toast.makeText(getBaseContext(), "корзина очищена", Toast.LENGTH_SHORT).show();
             }
         });
 
