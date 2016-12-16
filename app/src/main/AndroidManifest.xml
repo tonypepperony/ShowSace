@@ -27,7 +27,8 @@
         <activity android:name=".activities.SouvenirsActivity" />
         <activity android:name=".activities.BasketActivity" />
         <activity android:name=".activities.EmptyBasketActivity" />
-        <activity android:name=".activities.DeliverActivity"></activity>
+        <activity android:name=".activities.DeliverActivity" />
+        <activity android:name=".activities.FinishActivity"></activity>
     </application>
 
 </manifest>
