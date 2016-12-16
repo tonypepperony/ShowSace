@@ -11,7 +11,7 @@
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -24,14 +24,27 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="2dp" />
 
-    </RelativeLayout>
+        <ListView
+            android:id="@+id/listItemsBasket"
+            android:layout_below="@id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            tools:ignore="NestedScrolling" />
 
-    <ListView
-        android:id="@+id/listItemsBasket"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        tools:ignore="NestedScrolling"
-        android:layout_weight="3"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/basketBtn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="далее"
+            android:background="#7851b3"
+            android:textColor="#ffffff"
+            android:alpha="0.85"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
