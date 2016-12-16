@@ -38,7 +38,7 @@
             android:id="@+id/basketBtn"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:text="далее"
+            android:text="@string/next"
             android:background="#7851b3"
             android:textColor="#ffffff"
             android:alpha="0.85"

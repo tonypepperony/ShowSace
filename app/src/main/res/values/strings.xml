@@ -14,4 +14,6 @@
     <string name="action_settings">Settings</string>
     <string name="clear">clear</string>
     <string name="basket">basket</string>
+    <string name="next">далее</string>
+    <string name="st100rub">стоимость доставки: 100р</string>
 </resources>

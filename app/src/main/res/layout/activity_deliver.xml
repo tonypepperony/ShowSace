@@ -37,25 +37,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/rButton1"
-            android:checked="true"
-            android:clickable="true"
-            android:onClick="onClickRadioSelect"
             android:text="самовывоз ТК XL"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/rButton2"
-            android:clickable="true"
-            android:onClick="onClickRadioSelect"
             android:text="договориться по телефону"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/rButton3"
-            android:clickable="true"
-            android:onClick="onClickRadioSelect"
             android:text="доставить по адресу"/>
     </RadioGroup>
 
@@ -63,7 +56,8 @@
         android:layout_width="320dp"
         android:layout_height="140dp"
         android:inputType="textPersonName"
-        android:background="@drawable/border"
+        android:background="#ffffff"
+        android:textSize="15dp"
         android:gravity="top"
         android:hint="Введите адрес"
         android:ems="10"
@@ -81,8 +75,19 @@
         android:topRightRadius="10dp"
         android:id="@+id/nextButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/editText4"
-        android:layout_marginBottom="11dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:ems="14"
+        android:id="@+id/etDeliver"
+        android:layout_alignBaseline="@+id/nextButton"
+        android:layout_alignBottom="@+id/nextButton"
+        android:layout_alignStart="@+id/editText4" />
 
 
 </RelativeLayout>
