@@ -1,6 +1,5 @@
 package ru.rus.showsace.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,8 +19,7 @@ public class EmptyBasketActivity extends AppCompatActivity {
         button_return.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), MainActivity.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
     }
