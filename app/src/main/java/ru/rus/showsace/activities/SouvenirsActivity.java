@@ -33,6 +33,8 @@ public class SouvenirsActivity extends AppCompatActivity {
         items.add(new Item(305, "Casio f-91w metallic", R.drawable.souv05, 250));
 
         itemsAdapter.setItems(items);
+
+        setTitle("Souvenirs");
     }
 
     @Override

@@ -56,6 +56,8 @@ public class DeliverActivity extends AppCompatActivity {
                 }
             }
         });
+
+        setTitle("Способ доставки");
     }
 
     View.OnClickListener rbListener = new View.OnClickListener() {

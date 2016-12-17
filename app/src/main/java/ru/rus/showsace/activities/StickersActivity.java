@@ -34,6 +34,8 @@ public class StickersActivity extends AppCompatActivity {
         items.add(new Item(206, "Sticker pack #6", R.drawable.stick06, 100));
 
         itemsAdapter.setItems(items);
+
+        setTitle("Stickers");
     }
 
     @Override

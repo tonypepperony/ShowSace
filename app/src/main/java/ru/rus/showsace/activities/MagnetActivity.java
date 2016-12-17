@@ -36,6 +36,8 @@ public class MagnetActivity extends AppCompatActivity {
         items.add(new Item(108, "Just do it later", R.drawable.magnet08, 50));
 
         itemsAdapter.setItems(items);
+
+        setTitle("Magnets");
     }
 
     @Override

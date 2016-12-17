@@ -39,6 +39,8 @@ public class SodaActivity extends AppCompatActivity {
 
         itemsAdapter.setItems(items);
 
+        setTitle("Soda from USA");
+
     }
 
     @Override

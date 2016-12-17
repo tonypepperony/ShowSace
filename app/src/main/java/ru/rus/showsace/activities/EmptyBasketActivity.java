@@ -22,5 +22,7 @@ public class EmptyBasketActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        setTitle("Корзина");
     }
 }

@@ -6,7 +6,7 @@
     <string name="login_btn">Войти</string>
     <string name="email_auth">Электронная почта</string>
     <string name="password_auth">Пароль</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">ShowSace</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

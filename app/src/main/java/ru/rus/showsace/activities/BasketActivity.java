@@ -68,6 +68,7 @@ public class BasketActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        setTitle("Корзина");
     }
 
     @Override
