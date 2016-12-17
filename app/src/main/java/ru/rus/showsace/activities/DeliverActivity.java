@@ -40,6 +40,7 @@ public class DeliverActivity extends AppCompatActivity {
 
         address = (EditText) findViewById(R.id.editText4);
         address.setVisibility(View.INVISIBLE);
+        next2.setVisibility(View.INVISIBLE);
 
         next2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +80,7 @@ public class DeliverActivity extends AppCompatActivity {
                         DELIVERY_WAY = 0;
                         break;
                 }
+            next2.setVisibility(View.VISIBLE);
         }
     };
 }
