@@ -74,6 +74,7 @@ ArrayList<Item> items = new ArrayList<>();
             public void onClick(View view) {
                 //TODO: обработать кнопку
                 App.getInstance().removeZakazItem(item);
+                setItems(App.getZakaz());
             }
         });
 
