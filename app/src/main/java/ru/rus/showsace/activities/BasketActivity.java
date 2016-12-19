@@ -49,7 +49,9 @@ public class BasketActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 App.getInstance().clearZakaz();
+                Intent intent = new Intent(getBaseContext(), EmptyBasketActivity3.class);
                 Toast.makeText(getBaseContext(), "корзина очищена", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
             }
         });
 

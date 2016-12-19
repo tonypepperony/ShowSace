@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_empty_basket"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.rus.showsace.activities.EmptyBasketActivity">
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        app:srcCompat="@drawable/embasket2"
+        android:id="@+id/imageView4"
+        android:background="#00000000"
+        android:layout_marginTop="114dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/mainmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/EB_return_btn2"
+        android:background="#7851b3"
+        android:textColor="#ffffff"
+        android:layout_marginTop="81dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

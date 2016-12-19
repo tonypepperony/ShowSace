@@ -28,7 +28,8 @@
         <activity android:name=".activities.BasketActivity" />
         <activity android:name=".activities.EmptyBasketActivity" />
         <activity android:name=".activities.DeliverActivity" />
-        <activity android:name=".activities.FinishActivity"></activity>
+        <activity android:name=".activities.FinishActivity" />
+        <activity android:name=".activities.EmptyBasketActivity3"></activity>
     </application>
 
 </manifest>

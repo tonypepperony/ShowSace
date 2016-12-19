@@ -1,5 +1,6 @@
 package ru.rus.showsace.adapters;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 
 import ru.rus.showsace.App;
 import ru.rus.showsace.R;
+import ru.rus.showsace.activities.EmptyBasketActivity3;
 import ru.rus.showsace.models.Item;
 
 /**
@@ -53,8 +55,6 @@ ArrayList<Item> items = new ArrayList<>();
 
             holder.imageView = (ImageView) view.findViewById(R.id.image60);
             holder.textView = (TextView) view.findViewById(R.id.text60);
-//            holder.addButton = (Button) view.findViewById(R.id.addButton);
-//            holder.removeButton = (Button) view.findViewById(R.id.removeButton);
             holder.priceView = (TextView) view.findViewById(R.id.textPrice60);
             holder.deleteButton = (ImageButton) view.findViewById(R.id.deleteButton);
 
@@ -74,7 +74,15 @@ ArrayList<Item> items = new ArrayList<>();
             public void onClick(View view) {
                 //TODO: обработать кнопку
                 App.getInstance().removeZakazItem(item);
-                setItems(App.getZakaz());
+
+                if (App.getSizeZakaz()<1){
+                    Intent intent = new Intent(view.getContext().getApplicationContext(), EmptyBasketActivity3.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    view.getContext().getApplicationContext().startActivity(intent);
+                } else {
+                    setItems(App.getZakaz());
+                }
+
             }
         });
 
