@@ -24,4 +24,6 @@
     <string name="vvedite_addr">Введите адрес</string>
     <string name="zakazat">заказать</string>
     <string name="empty" />
+    <string name="registration">регистрация</string>
+    <string name="forgot">забыл пароль</string>
 </resources>

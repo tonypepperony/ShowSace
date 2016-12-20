@@ -1,7 +1,7 @@
 package ru.rus.showsace.fragments;
 
 import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import ru.rus.showsace.R;
+import ru.rus.showsace.activities.ForgotActivity;
+import ru.rus.showsace.activities.RegActivity;
 
 
 public class LoginFragment extends Fragment {
@@ -34,13 +37,14 @@ public class LoginFragment extends Fragment {
         if (getArguments() != null) {
 
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_login, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_login, container, false);
 
         final EditText login = (EditText) rootView.findViewById(R.id.login_ET);
         final EditText password = (EditText) rootView.findViewById(R.id.password_ET);
@@ -56,7 +60,27 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        TextView tvReg = (TextView) rootView.findViewById(R.id.textViewReg);
+        tvReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(rootView.getContext(), RegActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView tvForgot = (TextView) rootView.findViewById(R.id.textViewForgot);
+        tvForgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(rootView.getContext(), ForgotActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return rootView;
+
+
     }
 
 
