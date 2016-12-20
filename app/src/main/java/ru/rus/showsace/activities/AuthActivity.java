@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -17,6 +18,8 @@ import ru.rus.showsace.events.OnAPILoginSuccess;
 import ru.rus.showsace.fragments.LoginFragment;
 
 public class AuthActivity extends AppCompatActivity implements LoginFragment.OnFragmentInteractionListener {
+
+    private static long back_pressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +63,17 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
     @Override
     public void onRestoreRequested() {
         //TODO: add logic
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 3000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+        } else {
+            Toast.makeText(getBaseContext(), "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
+        }
+
+        back_pressed = System.currentTimeMillis();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

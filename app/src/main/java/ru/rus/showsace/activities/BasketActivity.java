@@ -27,18 +27,24 @@ public class BasketActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        context = BasketActivity.this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basket);
         ListView listView = (ListView) findViewById(R.id.listItemsBasket);
 
-        ItemsAdapterBasket itemsAdapter = new ItemsAdapterBasket();
-        listView.setAdapter(itemsAdapter);
-
         ArrayList<Item> items = new ArrayList<>(App.getZakaz());
 
-        itemsAdapter.setItems(items);
+        ItemsAdapterBasket itemsAdapter = new ItemsAdapterBasket(items, context);
+        listView.setAdapter(itemsAdapter);
 
-        context = BasketActivity.this;
+
+
+
+
+//        itemsAdapter.setItems(items);
+//        itemsAdapter.setmContext(context);
+
+
         String message = "Очистить корзину?";
         String ok = "ДА";
         String cancel ="ОТМЕНА";
@@ -74,6 +80,10 @@ public class BasketActivity extends AppCompatActivity {
         setTitle("Корзина");
     }
 
+    public void refreshPriceOnButton(){
+        next.setText(" "+ App.getZakazSum() + "р. > далее ");
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -90,4 +100,6 @@ public class BasketActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

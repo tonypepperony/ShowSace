@@ -1,5 +1,6 @@
 package ru.rus.showsace.adapters;
 
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 import ru.rus.showsace.App;
 import ru.rus.showsace.R;
+import ru.rus.showsace.activities.BasketActivity;
 import ru.rus.showsace.activities.EmptyBasketActivity3;
 import ru.rus.showsace.models.Item;
 
@@ -22,7 +24,8 @@ import ru.rus.showsace.models.Item;
  */
 
 public class ItemsAdapterBasket extends BaseAdapter {
-ArrayList<Item> items = new ArrayList<>();
+    ArrayList<Item> items = new ArrayList<>();
+    private Context mContext;
 
     public void setItems(ArrayList<Item> items) {
         this.items = items;
@@ -72,8 +75,12 @@ ArrayList<Item> items = new ArrayList<>();
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: обработать кнопку
+
                 App.getInstance().removeZakazItem(item);
+
+                if (mContext instanceof BasketActivity){
+                    ((BasketActivity)mContext).refreshPriceOnButton();
+                }
 
                 if (App.getSizeZakaz()<1){
                     Intent intent = new Intent(view.getContext().getApplicationContext(), EmptyBasketActivity3.class);
@@ -97,5 +104,14 @@ ArrayList<Item> items = new ArrayList<>();
         public TextView textView;
         public ImageButton deleteButton;
         public TextView priceView;
+    }
+
+    public ItemsAdapterBasket(ArrayList<Item> items, Context context) {
+        this.items = items;
+        this.mContext = context;
+    }
+
+    public void setmContext(Context mContext) {
+        this.mContext = mContext;
     }
 }
