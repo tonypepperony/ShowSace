@@ -18,4 +18,10 @@
     <string name="st100rub">стоимость доставки: 100р</string>
     <string name="itogo">Итого:</string>
     <string name="mainmenu">главное меню</string>
+    <string name="radioBtn_xl">самовывоз ТК XL - бесплатно</string>
+    <string name="radioBtn_tel">договориться по телефону - 100р.</string>
+    <string name="radioBtn_addr">доставить по адресу - 100р.</string>
+    <string name="vvedite_addr">Введите адрес</string>
+    <string name="zakazat">заказать</string>
+    <string name="empty" />
 </resources>

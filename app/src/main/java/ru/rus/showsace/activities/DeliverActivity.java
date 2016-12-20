@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ru.rus.showsace.App;
 import ru.rus.showsace.R;
 
 public class DeliverActivity extends AppCompatActivity {
@@ -65,15 +66,15 @@ public class DeliverActivity extends AppCompatActivity {
         public void onClick(View view) {
             RadioButton rb = (RadioButton) view;
                 switch (rb.getId()) {
-                    case R.id.rButton1: stoimost.setText("стоимость: бесплатно");
+                    case R.id.rButton1: stoimost.setText("Итого: " + App.getZakazSum() + "р.");
                         DELIVERY_WAY = 1;
                         address.setVisibility(View.INVISIBLE);
                         break;
-                    case R.id.rButton2: stoimost.setText(R.string.st100rub);
+                    case R.id.rButton2: stoimost.setText("Итого: " + (App.getZakazSum() + 100) + "р.");
                         DELIVERY_WAY = 2;
                         address.setVisibility(View.INVISIBLE);
                         break;
-                    case R.id.rButton3: stoimost.setText(R.string.st100rub);
+                    case R.id.rButton3: stoimost.setText("Итого: " + (App.getZakazSum() + 100) + "р.");
                         DELIVERY_WAY = 3;
                         address.setVisibility(View.VISIBLE);
                         break;
