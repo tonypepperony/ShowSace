@@ -13,13 +13,13 @@ public class RestApi {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (login.equals("login") && password.equals("password")){
+                if (login.equals("email") && password.equals("password")){
                     EventBus.getDefault().post(new OnAPILoginSuccess());
                 } else {
                     EventBus.getDefault().post(new OnAPILoginFail());
                 }
             }
-        }, 3000);
+        }, 10);
     }
 
     public static void register(String name, String login, String password){
