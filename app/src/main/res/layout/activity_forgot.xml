@@ -4,10 +4,36 @@
     android:id="@+id/activity_forgot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ru.rus.showsace.activities.ForgotActivity">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/e_mail2"
+        android:ems="10"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editTextForgot" />
+
+    <TextView
+        android:text="@string/e_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/editTextForgot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp" />
+
+    <Button
+        android:text="@string/sendPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:id="@+id/buttonSendPass"
+        android:background="#7851b3"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editTextForgot"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="20dp" />
 </RelativeLayout>

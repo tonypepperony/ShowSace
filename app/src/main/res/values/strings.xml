@@ -26,4 +26,7 @@
     <string name="empty" />
     <string name="registration">регистрация</string>
     <string name="forgot">забыл пароль</string>
+    <string name="e_mail">введите ваш e-mail</string>
+    <string name="e_mail2">e-mail</string>
+    <string name="sendPassword">выслать пароль</string>
 </resources>
