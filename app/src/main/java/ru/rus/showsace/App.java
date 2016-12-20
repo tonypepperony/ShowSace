@@ -29,14 +29,14 @@ public class App extends Application { // хранит состояние зал
         return currentState;
     }
 
-    public void setCurrentState(int currentState) {
-        if (this.currentState != currentState) {
-            this.currentState = currentState;
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putInt(APP_STATE, currentState);
-            editor.commit(); // запись состояния на диск
-        }
-    }
+//    public void setCurrentState(int currentState) {
+//        if (this.currentState != currentState) {
+//            this.currentState = currentState;
+//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//            editor.putInt(APP_STATE, currentState);
+//            editor.commit(); // запись состояния на диск
+//        }
+//    }
 
     public static ArrayList<Item> getZakaz() {
         return zakaz;

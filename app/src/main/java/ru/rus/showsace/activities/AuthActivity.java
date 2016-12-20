@@ -3,15 +3,13 @@ package ru.rus.showsace.activities;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import ru.rus.showsace.App;
 import ru.rus.showsace.R;
 import ru.rus.showsace.api.RestApi;
 import ru.rus.showsace.events.OnAPILoginFail;
@@ -24,11 +22,11 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (App.getInstance().getCurrentState() == App.STATE_LOGGED){
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-            return;
-        }
+//        if (App.getInstance().getCurrentState() == App.STATE_LOGGED){
+//            startActivity(new Intent(this, MainActivity.class));
+//            finish();
+//            return;
+//        }
 
         setContentView(R.layout.activity_auth);
 
@@ -79,7 +77,7 @@ public class AuthActivity extends AppCompatActivity implements LoginFragment.OnF
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onAPILoginSuccess(OnAPILoginSuccess event){
-        App.getInstance().setCurrentState(App.STATE_LOGGED);
+        //App.getInstance().setCurrentState(App.STATE_LOGGED);
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }

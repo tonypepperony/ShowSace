@@ -1,24 +1,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ru.rus.showsace.fragments.LoginFragment"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_gravity="center"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/logosc"
+        android:id="@+id/imageView6" />
+
     <EditText
         android:id="@+id/login_ET"
-        android:layout_width="match_parent"
+        android:layout_width="220dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_height="wrap_content"
         android:hint="@string/email_auth"/>
     <EditText
         android:id="@+id/password_ET"
-        android:layout_width="match_parent"
+        android:layout_width="220dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_height="wrap_content"
         android:hint="@string/password_auth"/>
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
         android:layout_height="wrap_content"
         android:text="@string/login_btn"/>
 
