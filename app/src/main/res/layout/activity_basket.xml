@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/accept3"
+            app:srcCompat="@drawable/accept6"
             android:layout_margin="10dp"
             android:scaleType="fitXY"
             android:id="@+id/imageView2"
@@ -35,7 +35,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="40sp"
+            android:layout_height="wrap_content"
             android:id="@+id/basketBtn"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
