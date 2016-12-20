@@ -63,6 +63,7 @@ public class BasketActivity extends AppCompatActivity {
         });
 
         next = (Button) findViewById(R.id.basketBtn);
+        next.setText(" "+ App.getZakazSum() + "р. > далее ");
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
