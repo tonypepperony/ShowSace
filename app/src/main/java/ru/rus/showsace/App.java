@@ -42,6 +42,16 @@ public class App extends Application { // хранит состояние зал
         return zakaz;
     }
 
+    public static int getZakazSum(){
+        int sum = 0;
+
+        for (int i = 0; i < zakaz.size(); i++) {
+            sum = sum + zakaz.get(i).getPrice();
+        }
+
+        return sum;
+    }
+
     public static int getSizeZakaz(){
         return zakaz.size();
     }
