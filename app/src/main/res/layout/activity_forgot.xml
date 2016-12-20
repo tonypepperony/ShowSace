@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_forgot"
     android:layout_width="match_parent"
@@ -36,4 +37,13 @@
         android:layout_below="@+id/editTextForgot"
         android:layout_alignEnd="@+id/textView2"
         android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/sendpass"
+        android:id="@+id/imageView7"
+        android:layout_marginBottom="38dp"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
