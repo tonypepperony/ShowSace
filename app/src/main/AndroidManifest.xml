@@ -31,7 +31,8 @@
         <activity android:name=".activities.FinishActivity" />
         <activity android:name=".activities.EmptyBasketActivity3" />
         <activity android:name=".activities.RegActivity" />
-        <activity android:name=".activities.ForgotActivity"></activity>
+        <activity android:name=".activities.ForgotActivity" />
+        <activity android:name=".activities.LawsActivity"></activity>
     </application>
 
 </manifest>

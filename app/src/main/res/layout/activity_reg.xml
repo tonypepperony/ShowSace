@@ -91,16 +91,6 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="правилами"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorTextBlue"
-        android:id="@+id/textViewLaws"
-        android:layout_alignBaseline="@+id/checkBox"
-        android:layout_alignBottom="@+id/checkBox"
-        android:layout_toEndOf="@+id/checkBox" />
-
-    <TextView
         android:text="Имя"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,25 +99,35 @@
         android:layout_alignStart="@+id/textView4"
         android:layout_marginBottom="6dp" />
 
+    <CheckBox
+        android:text="я согласен с "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/regCheckBox"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/regeditText4"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:text="правилами"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextBlue"
+        android:id="@+id/textViewLaws"
+        android:layout_alignBaseline="@+id/regCheckBox"
+        android:layout_alignBottom="@+id/regCheckBox"
+        android:layout_toEndOf="@+id/regCheckBox" />
+
     <Button
         android:text="зарегистрироваться"
         android:layout_width="wrap_content"
         android:layout_height="40sp"
         android:background="#7851b3"
         android:textColor="#ffffff"
-        android:id="@+id/button"
-        android:layout_marginTop="28dp"
-        android:layout_below="@+id/checkBox"
-        android:layout_centerHorizontal="true" />
-
-    <CheckBox
-        android:text="я согласен с "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/regeditText4"
-        android:layout_toEndOf="@+id/textView6" />
+        android:id="@+id/regButton"
+        android:layout_below="@+id/regCheckBox"
+        android:layout_alignEnd="@+id/textViewLaws"
+        android:layout_marginTop="20dp" />
 
 
 </RelativeLayout>
