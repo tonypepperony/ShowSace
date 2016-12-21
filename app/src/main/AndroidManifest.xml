@@ -32,7 +32,9 @@
         <activity android:name=".activities.EmptyBasketActivity3" />
         <activity android:name=".activities.RegActivity" />
         <activity android:name=".activities.ForgotActivity" />
-        <activity android:name=".activities.LawsActivity"></activity>
+        <activity android:name=".activities.LawsActivity" />
+        <activity android:name=".activities.ContactsActivity" />
+        <activity android:name=".activities.SettingsActivity"></activity>
     </application>
 
 </manifest>

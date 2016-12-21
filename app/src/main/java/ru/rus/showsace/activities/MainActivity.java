@@ -47,16 +47,6 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -103,7 +93,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            if (App.getSizeZakaz() >= 1) {
+                Intent intent = new Intent(getBaseContext(), BasketActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(getBaseContext(), EmptyBasketActivity.class);
+                startActivity(intent);
+            }
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
