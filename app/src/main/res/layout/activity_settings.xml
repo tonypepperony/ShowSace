@@ -25,8 +25,96 @@
         android:layout_height="wrap_content"
         android:background="#7851b3"
         android:textColor="#ffffff"
-        android:layout_below="@+id/textView9"
+        android:id="@+id/settingsBtnCancel"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:id="@+id/settingsBtnCancel" />
+        android:layout_marginBottom="26dp" />
+
+    <TextView
+        android:text="Настройка #1"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        android:layout_alignBottom="@+id/switch1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp" />
+
+    <TextView
+        android:text="Настройка #2"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView14"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView15" />
+
+    <TextView
+        android:text="Настройка #3"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView16" />
+
+    <TextView
+        android:text="Настройка #4"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView16"
+        android:layout_alignStart="@+id/textView16"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView17" />
+
+    <TextView
+        android:text="Настройка #5"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView17"
+        android:layout_alignStart="@+id/textView17"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView18" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView16"
+        android:layout_alignEnd="@+id/switch1"
+        android:id="@+id/switch2" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView17"
+        android:layout_alignEnd="@+id/switch2"
+        android:id="@+id/switch3" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView17"
+        android:layout_alignEnd="@+id/switch3"
+        android:id="@+id/switch4" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView18"
+        android:layout_alignEnd="@+id/switch4"
+        android:id="@+id/switch5" />
+
 </RelativeLayout>
