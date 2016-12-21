@@ -101,11 +101,15 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         } else if (id == R.id.nav_gallery) {
-
+            startActivity(new Intent(getBaseContext(), ContactsActivity.class));
         } else if (id == R.id.nav_slideshow) {
-
+            startActivity(new Intent(getBaseContext(), SettingsActivity.class));
         } else if (id == R.id.nav_manage) {
-
+            App.getInstance().clearZakaz();
+            Intent intent = new Intent(getBaseContext(), AuthActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
