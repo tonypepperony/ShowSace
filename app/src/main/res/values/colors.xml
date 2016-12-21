@@ -5,4 +5,5 @@
     <color name="colorAccent">#7376cc</color>
     <color name="colorTextBlue">#0011ff</color>
     <color name="colorDisabledButton">#ceced2</color>
+    <color name="colorEnbledButton">#7851b3</color>
 </resources>

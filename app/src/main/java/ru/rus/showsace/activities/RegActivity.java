@@ -1,5 +1,7 @@
 package ru.rus.showsace.activities;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import ru.rus.showsace.R;
@@ -24,6 +27,7 @@ public class RegActivity extends AppCompatActivity {
         final EditText regEtTel = (EditText) findViewById(R.id.regeditText2);
         final EditText regEtPass = (EditText) findViewById(R.id.regeditText3);
         final EditText regEtEmail = (EditText) findViewById(R.id.regeditText4);
+        TextView laws = (TextView) findViewById(R.id.textViewLaws);
         chBox = (CheckBox) findViewById(R.id.regCheckBox);
         final Button regBtn = (Button) findViewById(R.id.regButton);
         regBtn.setEnabled(false);
@@ -33,8 +37,10 @@ public class RegActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (chBox.isChecked()){
                     regBtn.setEnabled(true);
+                    regBtn.setBackgroundColor(Color.parseColor("#7851b3"));
                 } else {
                     regBtn.setEnabled(false);
+                    regBtn.setBackgroundColor(Color.parseColor("#ceced2"));
                 }
             }
         };
@@ -56,6 +62,15 @@ public class RegActivity extends AppCompatActivity {
                 }
             }
         });
+
+        laws.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), LawsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
